@@ -1,0 +1,165 @@
+:root {
+    /* color */
+    --white-color: #ffffff;
+    --black-color: #1b1b1b;
+    --blue-color: #80d6ff;
+    --red-color: #ff6090;
+
+    /* size */
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /* font size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+ul {
+    list-style: none;
+}
+
+/* li {
+    display: inline;
+} */
+
+button,
+button:focus {
+    border:none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo {
+    font-size: var(--font-medium);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+/* Video Player */
+
+.player {
+    position: sticky;
+    top:0;
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+/* Video Info */
+.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display : flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding)
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title{
+    font-size: var(--font-medium);
+    width: 300px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+}
+
+.info .views {
+    font-size : var(--font-small);
+    color: var(--black-color);
+}
+
+.action {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+
+.actions button {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-small)
+}
+
+.actions button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: var(--font-small)
+}
+
+/* upNext */
+.UpNext {
+    padding: 0 var(--padding);
+}
+
+.UpNext > .title {
+    font-size: var(--font-medium);
+    color: var(--black-color);
+    margin-bottom: calc(var(--padding) / 2);
+}
+
+.UpNext .item {
+    display: flex;
+}
+
+.UpNext .item img{
+    flex: 1 1 35%;
+    padding: var(--padding)
+}
+
+.UpNext .item .info{
+    flex: 1 1 60%;
+    flex-direction: column;
+}
+
+.UpNext .item .button{
+    flex: 1 1 5%;
+}

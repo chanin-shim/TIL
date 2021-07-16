@@ -1,0 +1,94 @@
+:root {
+    --text-color: #f0f4f5;
+    --accent-color:#d49466;
+}
+
+body {
+    font-family: 'source sans pro';
+}
+
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: black;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar__logo {
+    font-size : 24px;
+    color: white;
+}
+
+.navbar__logo i {
+    color: var(--accent-color);
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li:hover { 
+    /* 마우스 올렸을 때 나타나는 효과 */
+    background-color: red;
+    border-radius: 4px;
+    /* 둥글게 하는 효과임 */
+}
+
+.navbar__menu li {
+    padding: 6px 12px;
+}
+
+.navbar__icons {
+    display: flex;
+    color: white;
+    list-style: none;
+    padding:0
+}
+
+.navbar__icons li {
+    padding: 6px 12px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6px 12px;
+    }    
+
+    .navbar__menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar__icons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar_toglebtn{
+        display:none;
+        position:absolute;
+        right:32px;
+        font-size:24px;
+        color: orange
+    }
+
+    .navbar_toglebtn {
+        display:block;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+
+}

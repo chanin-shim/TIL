@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  plugins: [
+    createPersistedState(),
+  ],
   state: {
     todos: [
     ]
@@ -50,6 +54,11 @@ export default new Vuex.Store({
     completedTodosCount: function (state) {
       return state.todos.filter((todo) => {
         return todo.completed === true
+      }).length
+    },
+    uncompletedTodosCount: function (state) {
+      return state.todos.filter((todo) => {
+        return todo.completed === false
       }).length
     }
   },

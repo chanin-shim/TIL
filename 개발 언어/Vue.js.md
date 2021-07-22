@@ -2,7 +2,46 @@
 
 - Vue란?
 
+  - template
 
+    - html 작성
+
+  - script
+
+    - js 작성
+
+  - style
+
+    - css 작성
+
+    - ```vue
+      # scoped를 하면 현재 이 문서에서만 적용되는 스타일이라는 것임.
+      <style scoped>
+      </style>
+      ```
+
+
+## Vue cli
+
+### SFC
+
+- Component(컴포넌트)
+  - Vue 컴포넌트 === Vue 인스턴스
+- SFC (single file component)
+  - 컴포넌트 하나가 다 각각의 파일로 된거임
+
+
+
+### Vue cli
+
+- Vue.js 개발을 위한 표준 도구
+
+
+
+### NPM
+
+- python의 pip가 있다면 Node.js에는 NPM
+- 자바스크립트 언어를 위한 패키지 관리자
 
 - Component 보여주기 3단계
 
